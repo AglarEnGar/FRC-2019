@@ -18,7 +18,7 @@ import frc.robot.commands.TankDrive_Command;
  * An example subsystem.  You can replace me with your own Subsystem.
  */
 public class DriveTrain_subsystem extends Subsystem {
-  RobotMap robotport = new RobotMap();
+ 
   // Put methods for controlling this subsystem
   // here. Coall these from Commands.
 

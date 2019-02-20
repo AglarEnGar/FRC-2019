@@ -11,6 +11,6 @@ package frc.robot.subsystems;
  * Add your docs here.
  */
 public class VelcroBoard_subsystem {
-    Piston piston = new piston;
+    //Piston piston = new piston();
         
 }
