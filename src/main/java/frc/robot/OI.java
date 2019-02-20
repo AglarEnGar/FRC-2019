@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj.Joystick;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-  public static Joystick Driver = new Joystick(0);
+  public static Driver = new Joystick(0);
   public OI (){
 
   }
@@ -27,6 +27,13 @@ public class OI {
   public double getDriver2Joystick(){
     return Driver.getRawAxis(5);
 
+  }
+  public boolean RemoteButtons (){
+    return Driver.getRawButton(0);
+
+  }
+  public boolean RemoteButtons2(){
+    return Driver.getRawButton(1);
   }
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a

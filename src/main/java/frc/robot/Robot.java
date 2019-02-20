@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.TankDrive_Command;
 import frc.robot.subsystems.DriveTrain_subsystem;
+import frc.robot.subsystems.Pneumatic_subsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,6 +24,7 @@ import frc.robot.subsystems.DriveTrain_subsystem;
  * project.
  */
 public class Robot extends TimedRobot {
+  public static Pneumatic_subsystem Pneumatics = new Pneumatic_subsystem();
   public static DriveTrain_subsystem DriveTrain = new DriveTrain_subsystem();
   public static OI m_oi;
 
