@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.SendableBase;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import frc.robot.RobotMap;
 import frc.robot.commands.BoardInOut_Command;
 
 
@@ -28,11 +29,11 @@ public class Pneumatic_subsystem extends Subsystem {
     }
 
     public void out() {
-        pneumatic.set(DoubleSolenoid.Value.kForward);
+        RobotMap.Piston1.set(DoubleSolenoid.Value.kForward);
 
     }
     public void in() {
-        pneumatic.set(DoubleSolenoid.Value.kReverse);
+        RobotMap.Piston1.pneumatic.set(DoubleSolenoid.Value.kReverse);
         
     }
 

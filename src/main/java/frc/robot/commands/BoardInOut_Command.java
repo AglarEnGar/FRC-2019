@@ -10,6 +10,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.OI;
 import frc.robot.Robot;
+import frc.robot.RobotMap;
 
 /**
  * An example command.  You can replace me with your own command.
@@ -30,10 +31,10 @@ public class BoardInOut_Command extends Command {
   @Override
   protected void execute() {
     if (Robot.m_oi.RemoteButtons()) {
-      Robot.Pneumatics.out();
+      RobotMap.Piston1.out();
 
     } else {
-      Robot.Pneumatics.in();
+      RobotMap.Piston1.in();
     }
   }
 

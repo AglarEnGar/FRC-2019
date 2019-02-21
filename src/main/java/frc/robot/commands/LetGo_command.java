@@ -9,6 +9,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import frc.robot.RobotMap;
 import frc.robot.subsystems.Pneumatic_subsystem;
 
 /**
@@ -33,10 +34,10 @@ public class LetGo_command extends Command{
       @Override
       protected void execute() {
         if (Robot.m_oi.RemoteButtons2()) {
-          Robot.Pneumatics.out();
+          RobotMap.Piston2.out();
     
         } else {
-          Robot.Pneumatics.in();
+          RobotMap.Piston2.in();
         }
       }
     
@@ -49,7 +50,7 @@ public class LetGo_command extends Command{
       // Called once after isFinished returns true
       @Override
       protected void end() {
-        Robot.Pneumatics.in();
+        RobotMap.Piston2.in();
       }
     
       // Called when another command which requires one or more of the same
