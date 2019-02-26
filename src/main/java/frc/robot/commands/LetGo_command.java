@@ -21,8 +21,7 @@ public class LetGo_command extends Command{
         requires(Robot.Pneumatics);
       }
     
-      private void requires(Pneumatic_subsystem pneumatics) {
-	}
+      
 
 	// Called just before this Command runs the first time
       @Override
@@ -34,23 +33,23 @@ public class LetGo_command extends Command{
       @Override
       protected void execute() {
         if (Robot.m_oi.RemoteButtons2()) {
-          RobotMap.Piston2.out();
+          Robot.Pneumatics.out();
     
         } else {
-          RobotMap.Piston2.in();
+          Robot.Pneumatics.in();
         }
       }
     
       // Make this return true when this Command no longer needs to run execute()
       @Override
       protected boolean isFinished() {
-        return false;
+        return false; 
       }
     
       // Called once after isFinished returns true
       @Override
       protected void end() {
-        RobotMap.Piston2.in();
+        Robot.Pneumatics.in();
       }
     
       // Called when another command which requires one or more of the same

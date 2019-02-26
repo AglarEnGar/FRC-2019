@@ -12,7 +12,8 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import frc.robot.RobotMap;
-import frc.robot.commands.BoardInOut_Command;
+import frc.robot.commands.LetGo_command;
+
 
 
 /**
@@ -20,26 +21,31 @@ import frc.robot.commands.BoardInOut_Command;
  */
 public class Pneumatic_subsystem extends Subsystem {
     //Piston piston = new Piston;
+    public DoubleSolenoid Piston1 = new DoubleSolenoid(RobotMap.forwardSolenoid, RobotMap.reverseSolenoid);
     
-    private DoubleSolenoid pneumatic;
+
+    public void initDefaultCommand() {
+        
+        setDefaultCommand(new LetGo_command());
+        
+    }
 
     public Pneumatic_subsystem() {
-        pneumatic  = new DoubleSolenoid(0, 2, 4);
+     
 
     }
 
     public void out() {
-        RobotMap.Piston1.set(DoubleSolenoid.Value.kForward);
+       
+        Piston1.set(DoubleSolenoid.Value.kForward);
 
     }
     public void in() {
-        RobotMap.Piston1.pneumatic.set(DoubleSolenoid.Value.kReverse);
+      
+        Piston1.set(DoubleSolenoid.Value.kReverse);
         
     }
 
 
-    public void initDefaultCommand() {
-        setDefaultCommand(new BoardInOut_Command());
-        
-    }
+    
 }

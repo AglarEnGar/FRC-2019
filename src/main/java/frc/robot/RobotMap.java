@@ -13,7 +13,8 @@ package frc.robot;
  * floating around.
  */
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-import com.ctre.phoenix.motorcontrol.can.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 
 
@@ -22,19 +23,17 @@ public class RobotMap {
   public static VictorSPX LeftVictor2;
   public static VictorSPX RightVictor1;
   public static VictorSPX RightVictor2;
-  public static DoubleSolenoid Piston1;
-  public static DoubleSolenoid Piston2;
+  public static final int forwardSolenoid=0;
+  public static final int reverseSolenoid=1;
+
+  
+
+
 
 public RobotMap() {
-  LeftVictor1 = new VictorSPX(1);
-  LeftVictor2 = new VictorSPX(2);
-  RightVictor1 = new VictorSPX(3);
-  RightVictor2 = new VictorSPX(4);
-  Piston1 = new DoubleSolenoid(5, 0, 1);
-  Piston2 = new DoubleSolenoid(5,2,3);
+ 
+  
 
-  LeftVictor2.follow(LeftVictor1);
-  RightVictor2.follow(RightVictor1);
 
   
 

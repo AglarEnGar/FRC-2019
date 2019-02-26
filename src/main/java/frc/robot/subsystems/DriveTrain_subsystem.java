@@ -8,7 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
-
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
@@ -18,6 +18,18 @@ import frc.robot.commands.TankDrive_Command;
  * An example subsystem.  You can replace me with your own Subsystem.
  */
 public class DriveTrain_subsystem extends Subsystem {
+  VictorSPX LeftVictor1 = new VictorSPX(1);
+  VictorSPX LeftVictor2 = new VictorSPX(2);
+  VictorSPX RightVictor1 = new VictorSPX(3);
+  VictorSPX RightVictor2 = new VictorSPX(4);
+
+public DriveTrain_subsystem() {
+  LeftVictor2.follow(LeftVictor1);
+  RightVictor2.follow(RightVictor1);
+
+}
+ 
+
  
   // Put methods for controlling this subsystem
   // here. Coall these from Commands.
@@ -28,13 +40,13 @@ public class DriveTrain_subsystem extends Subsystem {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }
-  public void TeleopDrive(double left, double right){
-    RobotMap.LeftVictor1.set(ControlMode.PercentOutput, left);
-    RobotMap.RightVictor1.set(ControlMode.PercentOutput, -right);
+  public void TeleopDrive(double left, double right) {
+    LeftVictor1.set(ControlMode.PercentOutput, -left);
+    RightVictor1.set(ControlMode.PercentOutput, right);
 
   }
   public void Stop(){
-    RobotMap.LeftVictor1.set(ControlMode.PercentOutput, 0);
-    RobotMap.RightVictor1.set(ControlMode.PercentOutput, 0);
+    LeftVictor1.set(ControlMode.PercentOutput, 0);
+    RightVictor1.set(ControlMode.PercentOutput, 0);
   }
 }
