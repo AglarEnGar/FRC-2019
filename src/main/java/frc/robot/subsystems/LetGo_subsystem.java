@@ -19,7 +19,7 @@ import frc.robot.commands.LetGo_command;
 /**
  * Add your docs here.
  */
-public class Pneumatic_subsystem extends Subsystem {
+public class LetGo_subsystem extends Subsystem {
     //Piston piston = new Piston;
     public DoubleSolenoid Piston1 = new DoubleSolenoid(RobotMap.forwardSolenoid, RobotMap.reverseSolenoid);
     
@@ -30,7 +30,7 @@ public class Pneumatic_subsystem extends Subsystem {
         
     }
 
-    public Pneumatic_subsystem() {
+    public LetGo_subsystem() {
      
 
     }

@@ -26,11 +26,11 @@ public class OI {
 
   }
   public boolean RemoteButtons (){
-    return Driver.getRawButton(y);
+    return Driver.getRawButton(1);
 
   }
   public boolean RemoteButtons2(){
-    return Driver.getRawButton(x);
+    return Driver.getRawButton(2);
   }
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a

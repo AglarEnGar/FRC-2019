@@ -25,6 +25,8 @@ public class RobotMap {
   public static VictorSPX RightVictor2;
   public static final int forwardSolenoid=0;
   public static final int reverseSolenoid=1;
+  public static final int forwardSolenoid2=2;
+  public static final int reverseSolenoid2=3;
 
   
 

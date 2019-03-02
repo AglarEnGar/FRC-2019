@@ -24,7 +24,7 @@ public class DriveTrain_subsystem extends Subsystem {
   VictorSPX RightVictor2 = new VictorSPX(4);
 
 public DriveTrain_subsystem() {
-  LeftVictor2.follow(LeftVictor1);
+  LeftVictor2.follow(LeftVictor1)
   RightVictor2.follow(RightVictor1);
 
 }
@@ -42,7 +42,7 @@ public DriveTrain_subsystem() {
   }
   public void TeleopDrive(double left, double right) {
     LeftVictor1.set(ControlMode.PercentOutput, -left);
-    RightVictor1.set(ControlMode.PercentOutput, right);
+    RightVictor1.set(ControlMode.PercentOutput, -right);
 
   }
   public void Stop(){
